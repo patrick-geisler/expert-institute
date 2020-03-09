@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/expert-institute.github.io/static/css/main.5f361e03.chunk.css",
-    "main.js": "/expert-institute.github.io/static/js/main.f0c3db3e.chunk.js",
-    "main.js.map": "/expert-institute.github.io/static/js/main.f0c3db3e.chunk.js.map",
-    "runtime-main.js": "/expert-institute.github.io/static/js/runtime-main.eb570cde.js",
-    "runtime-main.js.map": "/expert-institute.github.io/static/js/runtime-main.eb570cde.js.map",
-    "static/js/2.af86c7f9.chunk.js": "/expert-institute.github.io/static/js/2.af86c7f9.chunk.js",
-    "static/js/2.af86c7f9.chunk.js.map": "/expert-institute.github.io/static/js/2.af86c7f9.chunk.js.map",
-    "index.html": "/expert-institute.github.io/index.html",
-    "precache-manifest.67e4b15ceef4e2889246a639bdf2fea9.js": "/expert-institute.github.io/precache-manifest.67e4b15ceef4e2889246a639bdf2fea9.js",
-    "service-worker.js": "/expert-institute.github.io/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/expert-institute.github.io/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.af86c7f9.chunk.js.LICENSE.txt": "/expert-institute.github.io/static/js/2.af86c7f9.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/expert-institute.github.io/static/media/logo.5d5d9eef.svg"
+    "main.css": "/static/css/main.5f361e03.chunk.css",
+    "main.js": "/static/js/main.d876c185.chunk.js",
+    "main.js.map": "/static/js/main.d876c185.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4d62486c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4d62486c.js.map",
+    "static/js/2.af86c7f9.chunk.js": "/static/js/2.af86c7f9.chunk.js",
+    "static/js/2.af86c7f9.chunk.js.map": "/static/js/2.af86c7f9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.add038013a7f93b10639ca6dfe108070.js": "/precache-manifest.add038013a7f93b10639ca6dfe108070.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.af86c7f9.chunk.js.LICENSE.txt": "/static/js/2.af86c7f9.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.eb570cde.js",
+    "static/js/runtime-main.4d62486c.js",
     "static/js/2.af86c7f9.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.f0c3db3e.chunk.js"
+    "static/js/main.d876c185.chunk.js"
   ]
 }
