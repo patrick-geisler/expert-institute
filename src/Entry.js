@@ -2,15 +2,15 @@ import React from 'react';
 import './App.css';
 import { Provider} from 'react-redux'
 import App from './App'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-import configureStore from './store/configureStore'
 
-const store = configureStore()
-
-const Entry = () => {
+const Entry = ({ store }) => {
   return (
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
   );
 }
