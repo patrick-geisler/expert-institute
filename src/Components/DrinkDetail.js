@@ -7,7 +7,7 @@ import '../Styles/DrinkDetailsCard.css'
 import { getDrinkDetails } from '../store/cocktails'
 
 const DrinkDetail = ({dispatchGetDrinkDetails, drinkDetails, match}) => {
-  const drinkId = match.params.drinkId
+  const drinkId = match && match.params.drinkId
 
   useEffect(() => {
     dispatchGetDrinkDetails(drinkId)

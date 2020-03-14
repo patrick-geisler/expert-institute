@@ -18,7 +18,7 @@ export const filteredLists = {
 // NORMALIZE DATA IN REDUCER???
 // TODO FIX ERROR HANDLING
 
-const receiveRandomCocktail = (json) => {
+export const receiveRandomCocktail = (json) => {
   return {
     type: 'RECEIVE_RANDOM_COCKTAIL',
     cocktails: json
@@ -49,7 +49,7 @@ const receiveDrinkDetails = (json) => {
 const isDataFetching = (bool) => {
   return {
     type: `IS_DATA_FETCHING`,
-    bool
+    bool: true
   }
 }
 
