@@ -21,7 +21,7 @@ const DrinksByCategory = ({ listType, dispatchGetdrinksByFilter, drinkList, matc
           //Fix Alt
           <Link to={`${match.url}/${drink.idDrink}`} key={index}>
             <div className='drinkCard' >
-              <img src={drink.strDrinkThumb} width='200' height='200' alt={drink.strDrink}/>
+              <img src={`${drink.strDrinkThumb}/preview`} width='200' height='200' alt={drink.strDrink}/>
               {drink.strDrink}
             </div>
           </Link>
