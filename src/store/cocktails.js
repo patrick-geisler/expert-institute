@@ -125,7 +125,7 @@ const getDrinkDetails = (drinkId) => {
   console.log(drinkId)
   return (dispatch) => {
     dispatch(isDataFetching(true))
-    return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=14588`)
+    return fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`)
       .then(
         response => response.json(),
         error => console.log('Failed to fetch Random Drink', error)

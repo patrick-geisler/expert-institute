@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux'
 import { getDrinksByFilter} from '../store/cocktails'
 import { Link, Route } from 'react-router-dom'
 
+import { ButtonBase }  from '@material-ui/core'
+
 
 const DrinksByCategory = ({ listType, dispatchGetdrinksByFilter, drinkList, match }) => {
   const filterParam = match.params.drinksList
@@ -21,8 +23,10 @@ const DrinksByCategory = ({ listType, dispatchGetdrinksByFilter, drinkList, matc
           //Fix Alt
           <Link to={`${match.url}/${drink.idDrink}`} key={index}>
             <div className='drinkCard' >
-              <img src={`${drink.strDrinkThumb}/preview`} width='200' height='200' alt={drink.strDrink}/>
-              {drink.strDrink}
+              <ButtonBase color='primary' variant='contained' className={'sidebar-button'}>
+                <img src={`${drink.strDrinkThumb}/preview`} width='200' height='200' alt={drink.strDrink}/>
+                <div className={'drink-title'}><strong>{drink.strDrink}</strong></div>
+              </ButtonBase>
             </div>
           </Link>
         )

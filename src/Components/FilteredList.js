@@ -12,6 +12,9 @@ import '../Styles/FilteredList.css';
 
 import DrinksByCategory from './DrinksByCategory'
 
+import { Button}  from '@material-ui/core'
+
+
 const FilteredList = ({listType, filteredList, dispatchGetFilteredList, match}) => {
   useEffect(() => {
     dispatchGetFilteredList(listType)
@@ -20,14 +23,16 @@ const FilteredList = ({listType, filteredList, dispatchGetFilteredList, match}) 
   const displayList = filteredList.drinks ? filteredList.drinks : ['Loading']
   return(
     <div className='filtered-list-container'>
-      <div>
+      <div className='side-bar-container'>
       {displayList[0] && displayList.map((displayElement, index) => {
         //FIX
         const filterElement = displayElement.strIngredient1 || displayElement.strGlass
         return(
-          <div key={index}>
-            <Link to={`${match.url}/${filterElement}`}>
-              {filterElement}
+          <div className={'list-filter'} key={index}>
+            <Link to={`${match.url}/${filterElement}`} className={'router-link'}>
+              <Button color='primary' variant='contained' className={'sidebar-button'}>
+                {filterElement}
+              </Button>
             </Link>
           </div>
         )

@@ -17,5 +17,32 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 24px;
+  margin: 24px;
+}
+
+.list-filter{
+  padding: 10px 0;
+  width: 100%;
+}
+
+.side-bar-container{
+  padding: 10px;
+}
+
+.sidebar-button{
+  width: 100%;
+}
+
+.router-link{
+  text-decoration: none;
+}
+
+.drink-title{
+  text-decoration: none;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  color: white;
+  font-size: 24px;
+  width: 80%;
 }

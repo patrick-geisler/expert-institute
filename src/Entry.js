@@ -11,7 +11,7 @@ const Entry = ({ store }) => {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <Router>
-          <App />
+          <App/>
         </Router>
       </ThemeProvider> 
     </Provider>
