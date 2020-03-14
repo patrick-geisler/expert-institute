@@ -14,7 +14,7 @@ const DrinkDetail = ({dispatchGetDrinkDetails, drinkDetails, match}) => {
   }, [dispatchGetDrinkDetails, drinkId])
 
   const drinkInfo = drinkDetails.drinks ? drinkDetails.drinks[0] : ['Loading']
-  console.log(drinkInfo)
+  // TODO: CREATE ING OBJ
   return(
   <div className='drink-detail-card'>
     <img src={`${drinkInfo.strDrinkThumb}/preview`} height='200' width='200' alt={drinkInfo.strDrink} />
