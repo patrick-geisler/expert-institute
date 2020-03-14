@@ -4,32 +4,47 @@ import { bindActionCreators } from 'redux'
 import { getFilteredList } from '../store/cocktails'
 import {
   Route,
-  Link
+  Link,
+  Switch
 } from "react-router-dom";
+import DrinkDetail from './DrinkDetail'
+import '../Styles/FilteredList.css';
 
-const FilteredList = ({listType, filteredList, dispatchGetFilteredList}) => {
+import DrinksByCategory from './DrinksByCategory'
 
+const FilteredList = ({listType, filteredList, dispatchGetFilteredList, match}) => {
   useEffect(() => {
     dispatchGetFilteredList(listType)
   }, [dispatchGetFilteredList, listType])
 
   const displayList = filteredList.drinks ? filteredList.drinks : ['Loading']
-
-  console.log(displayList)
-
   return(
-    <Route>
+    <div className='filtered-list-container'>
+      <div>
       {displayList[0] && displayList.map((displayElement, index) => {
+        //FIX
         const filterElement = displayElement.strIngredient1 || displayElement.strGlass
         return(
           <div key={index}>
-            <Link to={`/${filterElement}`}>
+            <Link to={`${match.url}/${filterElement}`}>
               {filterElement}
             </Link>
           </div>
         )
       })}
-    </Route>
+      </div>
+      <Switch>
+        <Route 
+          exact
+          path={`${match.path}/:drinksList`} 
+          render={(props) => <DrinksByCategory listType={listType} {...props} />}
+        />
+        <Route 
+          path={`${match.path}/:drinksList/:drinkId`} 
+          render={(props) => <DrinkDetail {...props}/>}
+        />
+      </Switch>
+    </div>
   )
 }
 
@@ -38,7 +53,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  dispatchGetFilteredList: getFilteredList,
+  dispatchGetFilteredList: getFilteredList
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(FilteredList)

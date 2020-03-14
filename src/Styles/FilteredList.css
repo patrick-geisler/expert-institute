@@ -1,0 +1,21 @@
+.filtered-list-container {
+  display: flex;
+}
+
+.filtered-list-cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width:100%;
+  height: 100%;
+  justify-content: center;
+}
+
+
+/* Normalize Image Response to fix creen creep */
+.drinkCard{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 24px;
+}

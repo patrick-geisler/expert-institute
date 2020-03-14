@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import FilteredList from './Components/FilteredLiquor'
+import FilteredList from './Components/FilteredList'
 import Home from './Components/Home'
 import {
   Route,
@@ -10,25 +10,30 @@ import {
 import { bindActionCreators } from 'redux'
 import { getRandomCocktails, filteredLists } from './store/cocktails'
 
-const Wrapper = ({cocktails, dispatchGetCocktails}) => {
+const Wrapper = ({cocktails, dispatchGetRandomCocktail}) => {
 
   useEffect(() => {
-    dispatchGetCocktails()
-  }, [dispatchGetCocktails])
+    dispatchGetRandomCocktail()
+  }, [dispatchGetRandomCocktail])
 
   const RandDrink = cocktails.drinks ? cocktails.drinks[0].strDrink : 'Loading'
   console.log(RandDrink)
 
   return(
+    //add Animations
     <Switch>
       <Route exact path='/' component={Home} />
       <Route 
-        path='/filteredLiquor' 
-        render={(props) => <FilteredList listType={filteredLists.INGREDIENT} />}
+        path='/filteredIngredient' 
+        render={(props) => <FilteredList listType={filteredLists.INGREDIENT} {...props} />}
       />
       <Route 
         path='/filteredGlass' 
-        render={(props) => <FilteredList listType={filteredLists.GLASS} />}
+        render={(props) => <FilteredList listType={filteredLists.GLASS} {...props} />}
+      />
+      {/* Add 404 */}
+      <Route
+        render={(props) => <div>404</div>} 
       />
     </Switch>
   )
@@ -39,7 +44,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  dispatchGetCocktails: getRandomCocktails,
+  dispatchGetRandomCocktail: getRandomCocktails,
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wrapper)

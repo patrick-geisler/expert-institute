@@ -7,7 +7,7 @@ import {
 const Home = () => {
   return(
     <Route>
-      <Link to='filteredLiquor'> Filter By Liquor </Link>
+      <Link to='filteredIngredient'> Filter By Ingredient </Link>
       <Link to='filteredGlass'> Filter By Glass </Link>
     </Route>
   )
